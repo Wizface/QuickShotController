@@ -12,7 +12,7 @@ import nxt.locator
 import nxt.brick
 import nxt.usbsock
 
-nxt.locator.make_config()
+#nxt.locator.make_config()
 
 debug = False
 if '--verbose' in sys.argv or '--debug' in sys.argv:
@@ -52,5 +52,5 @@ print("AIDS")
 
 from nxt.motor import *
 
-m_left = Motor(b, PORT_A)
+m_left = Motor(b, PORT_B)
 m_left.turn(100, 360)
