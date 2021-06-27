@@ -12,6 +12,8 @@ import nxt.locator
 import nxt.brick
 import nxt.usbsock
 
+nxt.locator.make_config()
+
 debug = False
 if '--verbose' in sys.argv or '--debug' in sys.argv:
     debug = True
