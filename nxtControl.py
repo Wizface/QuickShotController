@@ -10,6 +10,7 @@ Usage: nxt_test           # Finds one brick and shows information about it
 
 import nxt.locator
 import nxt.brick
+import nxt.usbsock
 
 debug = False
 if '--verbose' in sys.argv or '--debug' in sys.argv:
@@ -19,7 +20,7 @@ if '--verbose' in sys.argv or '--debug' in sys.argv:
 b = None
 try:
     print('Find brick...', flush=True)
-    b = nxt.locator.find_one_brick(debug=debug)
+    b = nxt.locator.find_one_brick(debug=True)
     name, host, signal_strength, user_flash = b.get_device_info()
     print('NXT brick name: %s' % name)
     print('Host address: %s' % host)
