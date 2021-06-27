@@ -7,7 +7,7 @@ Usage: nxt_test           # Finds one brick and shows information about it
        nxt_test --help    # Shows this help
 """)
     exit(0)
-    
+
 import nxt
 import nxt.locator
 import nxt.brick
@@ -54,4 +54,4 @@ print("AIDS")
 from nxt.motor import *
 
 m_left = Motor(b, PORT_B)
-m_left.turn(100, 360)
+m_left.turn(100, 20)
