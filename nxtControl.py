@@ -46,3 +46,11 @@ except:
     print(str(sys.exc_info()[1]))
     if b in locals():
         b.sock.close()
+
+
+print("AIDS")
+
+from nxt.motor import *
+
+m_left = Motor(b, PORT_A)
+m_left.turn(100, 360)
