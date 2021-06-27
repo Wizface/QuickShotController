@@ -1,13 +1,25 @@
 import sys, traceback
-import nxt
+
+if '--help' in sys.argv:
+    print("""Tests the nxt-python setup and brick firmware interaction
+Usage: nxt_test           # Finds one brick and shows information about it
+       nxt_test --verbose # Shows more debug information when trying to find the brick
+       nxt_test --help    # Shows this help
+""")
+    exit(0)
+
 import nxt.locator
 import nxt.brick
 
-b = None
+debug = False
+if '--verbose' in sys.argv or '--debug' in sys.argv:
+    debug = True
+    print('debug = True')
 
+b = None
 try:
     print('Find brick...', flush=True)
-    b = nxt.locator.find_one_brick()
+    b = nxt.locator.find_one_brick(debug=debug)
     name, host, signal_strength, user_flash = b.get_device_info()
     print('NXT brick name: %s' % name)
     print('Host address: %s' % host)
