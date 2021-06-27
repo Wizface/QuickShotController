@@ -7,7 +7,8 @@ Usage: nxt_test           # Finds one brick and shows information about it
        nxt_test --help    # Shows this help
 """)
     exit(0)
-
+    
+import nxt
 import nxt.locator
 import nxt.brick
 import nxt.usbsock
