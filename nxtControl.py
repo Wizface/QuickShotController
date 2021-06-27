@@ -3,6 +3,8 @@ import nxt
 import nxt.locator
 import nxt.brick
 
+b = None
+
 try:
     print('Find brick...', flush=True)
     b = nxt.locator.find_one_brick()
