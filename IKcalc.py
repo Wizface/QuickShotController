@@ -63,7 +63,7 @@ while True: # Run forever
         print("DOWN")
     if GPIO.input(7) == GPIO.LOW: # LEFT Direction
         print("LEFT")
-        base_motor.turn(50, -10)
+        base_motor.turn(-50, 10)
     if GPIO.input(8) == GPIO.LOW: # RIGHT Direction
         print("RIGHT")
         base_motor.turn(50, 10)
